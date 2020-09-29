@@ -126,6 +126,13 @@ when "2"
         bmi_height = gets.chomp
         bmi.height(bmi_height)
         bmi.calc
+        puts "When ready, type 'return' to go back to menu"
+        input = gets.chomp
+        if input == "return"
+            next
+        else
+            exit
+        end
         
     when "2"
         puts "Let's calculate your BMR and TDEE! This will help you control your daily caloric intake"
@@ -157,6 +164,13 @@ when "2"
         puts "If you want to lose weight at a quicker pace (0.5kg per week), eat #{m_weight_loss} calories a day"
         puts "If you want to gain weight gradually (0.25kg per week), eat #{s_weight_gain} calories a day"
         puts "If you want to gain weight at a quicker pace (0.5kg per week), eat #{m_weight_gain} calories a day"
+        puts "When ready, type 'return' to go back to menu"
+        input = gets.chomp
+        if input == "return"
+            next
+        else
+            exit
+        end
 
     when "3"
         puts "THREE"
