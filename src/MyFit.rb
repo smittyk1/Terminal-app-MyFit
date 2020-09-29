@@ -11,6 +11,9 @@ require 'terminal-table'
 require 'rubybody'
 require 'bmi'
 require 'colorize'
+require 'tty-progressbar'
+require 'tty-prompt'
+prompt = TTY::Prompt.new
 
 # Arrays used to populate the exercise tables, divided based on muscle group
 chest_ex = [
@@ -18,7 +21,8 @@ chest_ex = [
     ["Decline \nPushup", "10 - 15", " 1. Keep pushup technique in mind \n 2. Align hands with center of chest \n 3. Keep hands slightly wider than shoulder-width apart \n 4. Keep legs straight, feet together and core tight throughout movement", "Too hard? \n Reduce leg elevation or regress to pushup \nToo easy? \n Elevate hands for deeper range of motion"],
     ["Chest\n Dip", "10 - 12", " 1. Hold onto parallel bars with feet off the ground/elbows locked out \n 2. Lean forward to put emphasis on chest \n 3. Maintain lean whilst lowering yourself \n 4. Keep elbows tucked in throughout motion \n 5. Hold at bottom for a second then strictly push till elbows lockout", "Too hard?\n Place something for your feet to rest on\n whilst you do the movement\nToo easy? \n Invest in a weight vest! Or place a resistance\n band around the back of your neck"],
     ["Archer\nPushup", "5 - 8\nEach arm", " 1. Get into a pushup position but with hands wide apart \n 2. Ensure hands are facing outwards(fingers pointing out, not forward) \n 3. Lower yourself by bending only one arm \n 4. Keep opposite arm straight out (not allowing hand to move/slide) \n 5. Alternate arm each rep until completion", "Too hard?\n instead, elevate one hand slightly\n and conduct a normal pushup with more\n tension placed on lower arm\nToo easy?\n attempt a single-arm pushup"],
-    ["Type-\nwriter\nPushup", "8 - 10", " 1. Start in a wide pushup position with hands facing out \n 2. Lower yourself like any other pushup movement \n 3. At the bottom of the movement, shift your weight onto one arm \n 4. Hold then switch to your other arm (keeping chest close to ground) \n 5. Bring yourself back to the center and push up to complete the rep"]
+    ["Type-\nwriter\nPushup", "8 - 10", " 1. Start in a wide pushup position with hands facing out \n 2. Lower yourself like any other pushup movement \n 3. At the bottom of the movement, shift your weight onto one arm \n 4. Hold then switch to your other arm (keeping chest close to ground) \n 5. Bring yourself back to the center and push up to complete the rep"],
+    [""]
 ]
 
 back_ex = [
@@ -51,15 +55,50 @@ table_arms = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Techniq
 table_shoulders = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => shoulder_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true} 
 table_legs = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => leg_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
 
-puts "Welcome to MyFit!"
-loop do
- puts "Let's get fit! select an option (1 - 4)" 
- puts "
-1. Exercise
-2. Nutrition
-3. Motivate 
-4. Exit "   
+clear_screen
+puts "
 
+
+                                                                                                                 
+                                                                                                                 
+                    MMMMMMMM               MMMMMMMM                              FFFFFFFFFFFFFFFFFFFFFF  iiii          tttt          
+                    M:::::::M             M:::::::M                              F::::::::::::::::::::F i::::i      ttt:::t          
+                    M::::::::M           M::::::::M                              F::::::::::::::::::::F  iiii       t:::::t          
+                    M:::::::::M         M:::::::::M                              FF::::::FFFFFFFFF::::F             t:::::t          
+                    M::::::::::M       M::::::::::Myyyyyyy           yyyyyyy       F:::::F       FFFFFFiiiiiiittttttt:::::ttttttt    
+                    M:::::::::::M     M:::::::::::M y:::::y         y:::::y        F:::::F             i:::::it:::::::::::::::::t    
+                    M:::::::M::::M   M::::M:::::::M  y:::::y       y:::::y         F::::::FFFFFFFFFF    i::::it:::::::::::::::::t    
+                    M::::::M M::::M M::::M M::::::M   y:::::y     y:::::y          F:::::::::::::::F    i::::itttttt:::::::tttttt    
+                    M::::::M  M::::M::::M  M::::::M    y:::::y   y:::::y           F:::::::::::::::F    i::::i      t:::::t          
+                    M::::::M   M:::::::M   M::::::M     y:::::y y:::::y            F::::::FFFFFFFFFF    i::::i      t:::::t          
+                    M::::::M    M:::::M    M::::::M      y:::::y:::::y             F:::::F              i::::i      t:::::t          
+                    M::::::M     MMMMM     M::::::M       y:::::::::y              F:::::F              i::::i      t:::::t    tttttt
+                    M::::::M               M::::::M        y:::::::y             FF:::::::FF           i::::::i     t::::::tttt:::::t
+                    M::::::M               M::::::M         y:::::y              F::::::::FF           i::::::i     tt::::::::::::::t
+                    M::::::M               M::::::M        y:::::y               F::::::::FF           i::::::i       tt:::::::::::tt
+                    MMMMMMMM               MMMMMMMM       y:::::y                FFFFFFFFFFF           iiiiiiii         ttttttttttt  
+                                                         y:::::y                                                                     
+                                                        y:::::y                                                                      
+                                                       y:::::y                                                                       
+                                                      y:::::y                                                                        
+                                                     yyyyyyy                                                                         
+                                                                                                                 
+                                                                                                                
+
+"
+loop do
+ puts "
+                            ██      ███████ ████████ ███████      ██████  ███████ ████████     ███████ ██ ████████ ██ 
+                            ██      ██         ██    ██          ██       ██         ██        ██      ██    ██    ██ 
+                            ██      █████      ██    ███████     ██   ███ █████      ██        █████   ██    ██    ██ 
+                            ██      ██         ██         ██     ██    ██ ██         ██        ██      ██    ██       
+                            ███████ ███████    ██    ███████      ██████  ███████    ██        ██      ██    ██    ██                                                                                                                                                                         
+ " 
+ puts "
+                                                                1. Exercise
+                                                                2. Nutrition
+                                                                3. Motivate 
+                                                                4. Exit "   
 option = gets.chomp
 clear_screen
 case option
@@ -137,7 +176,17 @@ when "2"
         bmi_height = gets.chomp
         bmi.height(bmi_height)
         clear_screen
+        puts "
+       
+    ██████╗ ███╗   ███╗██╗
+    ██╔══██╗████╗ ████║██║
+    ██████╔╝██╔████╔██║██║
+    ██╔══██╗██║╚██╔╝██║██║
+    ██████╔╝██║ ╚═╝ ██║██║
+    ╚═════╝ ╚═╝     ╚═╝╚═╝          
+        "
         bmi.calc
+        puts "-------------------------------------------------------------------------------------------------"
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
         clear_screen
@@ -164,20 +213,60 @@ when "2"
         s_weight_gain = person.tdee + 250
         m_weight_gain = person.tdee + 500
 
-        puts "Your Basal Metabolic Rate (BMR) is #{person.bmr} calories a day."
-        puts "This is the amount of energy your body will passivly burn in a day whilst rested (not participating in any physical activity)"
-        puts "This means that #{person.bmr} calories is the amount you need to consume to maintain your weight on days you do little to no energy-burning activity!"
-        puts "--------------------------------------------------------------------------------------------------------------------------------------------------------"
-        puts "Your Total Daily Energy Expenditure (TDEE) is #{person.tdee} calories a day."
-        puts "This is the amount of energy your body will burn on days you are reasonably active (walking, running, exercise)"
-        puts "This means that #{person.tdee} calories is your daily maintenance and can be considered the amount you will burn on MOST days"
-        puts "--------------------------------------------------------------------------------------------------------------------------------------------------------"
-        puts "If you want to gain or lose weight in a safe and healthy way, stick to the following daily calories"
-        puts "(Keep in mind that everyone is different and you should moniter your weight gain/loss to adjust these numbers if you are gaining or losing too quickly)"
-        puts "If you want to lose weight gradually (0.25kg per week), eat #{s_weight_loss} calories a day"
-        puts "If you want to lose weight at a quicker pace (0.5kg per week), eat #{m_weight_loss} calories a day"
-        puts "If you want to gain weight gradually (0.25kg per week), eat #{s_weight_gain} calories a day"
-        puts "If you want to gain weight at a quicker pace (0.5kg per week), eat #{m_weight_gain} calories a day"
+        bar = TTY::ProgressBar.new("Calculating [:bar]", total: 30)
+        30.times do
+        sleep(0.1)
+        bar.resize(150)
+        bar.advance(1)
+        end
+        clear_screen
+        puts "
+        
+                                                                ██████╗ ███╗   ███╗██████╗ 
+                                                                ██╔══██╗████╗ ████║██╔══██╗
+                                                                ██████╔╝██╔████╔██║██████╔╝
+                                                                ██╔══██╗██║╚██╔╝██║██╔══██╗
+                                                                ██████╔╝██║ ╚═╝ ██║██║  ██║
+                                                                ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝
+        "
+        puts "                                                 Your Basal Metabolic Rate (BMR) is #{person.bmr} calories a day."
+        puts "                   This is the amount of energy your body will passivly burn in a day whilst rested (not participating in any physical activity)"
+        puts "            This means that #{person.bmr} calories is the amount you need to consume to maintain your weight on days you do little to no energy-burning activity!"
+                
+        puts "        --------------------------------------------------------------------------------------------------------------------------------------------------------"
+        puts "
+        
+                                                             ████████╗██████╗ ███████╗███████╗
+                                                             ╚══██╔══╝██╔══██╗██╔════╝██╔════╝
+                                                                ██║   ██║  ██║█████╗  █████╗  
+                                                                ██║   ██║  ██║██╔══╝  ██╔══╝  
+                                                                ██║   ██████╔╝███████╗███████╗
+                                                                ╚═╝   ╚═════╝ ╚══════╝╚══════╝
+        "
+        puts "                                            Your Total Daily Energy Expenditure (TDEE) is #{person.tdee} calories a day."
+        puts "                        This is the amount of energy your body will burn on days you are reasonably active (walking, running, exercise)"
+    puts "                     This means that #{person.tdee} calories is your daily maintenance and can be considered the amount you will burn on MOST days"
+           
+        puts "        --------------------------------------------------------------------------------------------------------------------------------------------------------"
+        puts "
+    
+                                            ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗   ██╗██╗ ██████╗███████╗
+                                           ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║   ██║██║██╔════╝██╔════╝
+                                           ██║   ██║██║   ██║██████╔╝    ███████║██║  ██║██║   ██║██║██║     █████╗  
+                                           ██║   ██║██║   ██║██╔══██╗    ██╔══██║██║  ██║╚██╗ ██╔╝██║██║     ██╔══╝  
+                                           ╚██████╔╝╚██████╔╝██║  ██║    ██║  ██║██████╔╝ ╚████╔╝ ██║╚██████╗███████╗
+                                            ╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚═╝ ╚═════╝╚══════╝                                                   
+        "
+        puts "                               If you want to gain or lose weight in a safe and healthy way, stick to the following daily calories"
+    puts "        (Keep in mind that everyone is different and you should moniter your weight gain/loss to adjust these numbers if you are gaining or losing too quickly)"
+    puts "    
+         "
+                          puts "                                    If you want to lose weight gradually (0.25kg per week), eat #{s_weight_loss} calories a day"
+                          puts "                                    If you want to lose weight at a quicker pace (0.5kg per week), eat #{m_weight_loss} calories a day"
+                          puts "                                    If you want to gain weight gradually (0.25kg per week), eat #{s_weight_gain} calories a day"
+                          puts "                                    If you want to gain weight at a quicker pace (0.5kg per week), eat #{m_weight_gain} calories a day"
+        puts "        --------------------------------------------------------------------------------------------------------------------------------------------------------"                    
+        puts ""                    
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
         clear_screen
