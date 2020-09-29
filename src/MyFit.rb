@@ -1,3 +1,11 @@
+def clear_screen
+    if RUBY_PLATFORM =~ /win32|win64|\.NET|windows|cygwin|mingw32/i
+      system('cls')
+    else
+      system('clear')
+    end
+end
+
 # Ruby gems used in this application
 require 'terminal-table'
 require 'rubybody'
@@ -53,16 +61,18 @@ loop do
 4. Exit "   
 
 option = gets.chomp
-
+clear_screen
 case option
 when "1"
     puts "What would you like to train? (chest, back, arms, shoulders, legs)"
     choice = gets.chomp
+    clear_screen
     case choice.downcase
     when "chest"
         puts table_chest
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
+        clear_screen
         if input == "return"
             next
         else
@@ -115,6 +125,7 @@ when "2"
 3. I want to know some low-calorie foods that will help me lose weight
 4. I want to know some high-calorie foods that will help me gain weight"
     choice = gets.chomp
+    clear_screen
     case choice
     when "1"
         puts "To determine if your weight is healthy, we'll calculate your Body Mass Index (BMI)"
@@ -125,9 +136,11 @@ when "2"
         puts "How tall are you in metres? (No need to type m after your answer)"
         bmi_height = gets.chomp
         bmi.height(bmi_height)
+        clear_screen
         bmi.calc
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
+        clear_screen
         if input == "return"
             next
         else
@@ -144,6 +157,7 @@ when "2"
         age = gets.chomp
         puts "are you male or female?"
         sex = gets.chomp
+        clear_screen
         person = Rubybody::Person.new(weight.to_i, height.to_i, age.to_i, sex.to_sym)
         s_weight_loss = person.tdee - 250
         m_weight_loss = person.tdee - 500
@@ -166,6 +180,7 @@ when "2"
         puts "If you want to gain weight at a quicker pace (0.5kg per week), eat #{m_weight_gain} calories a day"
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
+        clear_screen
         if input == "return"
             next
         else
