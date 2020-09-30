@@ -1,3 +1,12 @@
+# Ruby gems used in this application
+require 'terminal-table'
+require 'rubybody'
+require 'bmi'
+require 'colorize'
+require 'tty-progressbar'
+require 'tty-prompt'
+
+#methods used in this application
 def clear_screen
     if RUBY_PLATFORM =~ /win32|win64|\.NET|windows|cygwin|mingw32/i
       system('cls')
@@ -6,14 +15,11 @@ def clear_screen
     end
 end
 
-# Ruby gems used in this application
-require 'terminal-table'
-require 'rubybody'
-require 'bmi'
-require 'colorize'
-require 'tty-progressbar'
-require 'tty-prompt'
-prompt = TTY::Prompt.new
+def array_shuffle(array)
+    array.shuffle
+    puts array[0]
+end
+
 
 # Arrays used to populate the exercise tables, divided based on muscle group
 chest_ex = [
@@ -169,7 +175,7 @@ when "1"
             exit
         end
     else 
-        puts "Invalid Selection"
+        puts "Invalid Selection".colorize(:red)
     end
 when "2"
     puts "What would you like to know? Select an option (1 - 4)"
@@ -303,13 +309,14 @@ when "2"
     when "4"
         puts "FOUR"
     else
-        puts "Invalid Selection"
+        puts "Invalid Selection".colorize(:red)
     end
 when "3"
-    puts "Motivate"
+    array_shuffle([])
+    array_shuffle([])
 when "4" || "exit"
     (puts "Stay fit, stay active! You've got this!!") + exit
 else
-    puts "Invalid selection"
+    puts "Invalid selection".colorize(:red)
 end
 end
