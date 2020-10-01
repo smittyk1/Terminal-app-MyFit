@@ -16,8 +16,7 @@ def clear_screen
 end
 
 def array_shuffle(array)
-    array.shuffle
-    puts array[0]
+    puts array.sample
 end
 
 
@@ -66,6 +65,36 @@ highcal = [
     [],
     [],
 ]
+
+quotes = [
+    "The last three or four reps is what makes the muscle grow. This area of pain divides a champion from someone who is not a champion. — Arnold Schwarzenegger", 
+    "Success usually comes to those who are too busy to be looking for it. — Henry David Thoreau", 
+    "All progress takes place outside the comfort zone. — Michael John Bobak", 
+    "If you think lifting is dangerous, try being weak. Being weak is dangerous. — Bret Contreras", 
+    "The only place where success comes before work is in the dictionary. — Vidal Sassoon", 
+    "The clock is ticking. Are you becoming the person you want to be? — Greg Plitt", 
+    "You must expect great things of yourself before you can do them. — Michael Jordan",
+    "Action is the foundational key to all success. — Pablo Picasso",
+    "Well done is better than well said. — Benjamin Franklin",
+    "All our dreams can come true if we have the courage to pursue them. — Walt Disney",
+    "A champion is someone who gets up when they can’t. — Jack Dempsey",
+    "What hurts today makes you stronger tomorrow. — Jay Cutler",
+    "If something stands between you and your success, move it. Never be denied. — Dwayne ‘The Rock’ Johnson",
+    "If you want something you’ve never had, you must be willing to do something you’ve never done. — Thomas Jefferson",
+    "You have to think it before you can do it. The mind is what makes it all possible. — Kai Greene",
+    "Success is walking from failure to failure with no loss of enthusiasm. — Winston Churchill"
+    ]
+
+    tips = [
+    "Tip: Always add progressive overload to your training. This may be in the form of increasing reps or weight each week, or simply decreasing rest time between exercises each week",
+    "Tip: Value your form over everything else. 10 reps with perfect form are more beneficial than 20 reps with poor form",
+    "Tip: Sleep is cruical. If you dont get your proper 7 - 9 hours sleep, you will see less progress",
+    "Tip: Drink lot's of water each day, it will help your body in more ways than you know",
+    "Tip: Let yourself have a cheat meal once a week, you've earned it and it will help you stick to your diet",
+    "Tip: Don't compare yourself to others, everyone is on their own path in fitness",
+    "Tip: Enjoy the process, those that succeed don't just focus on the end result, they love the journey aswell"
+    ]
+
 # styling and titling of various tables
 table_chest = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => chest_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
 table_back = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => back_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
@@ -312,8 +341,19 @@ when "2"
         puts "Invalid Selection".colorize(:red)
     end
 when "3"
-    array_shuffle([])
-    array_shuffle([])
+    puts ""
+    array_shuffle(quotes)
+    puts ""
+    array_shuffle(tips)
+    puts ""
+    puts "When ready, type 'return' to go back to menu"
+        input = gets.chomp
+        clear_screen
+        if input == "return"
+            next
+        else
+            exit
+        end
 when "4" || "exit"
     (puts "Stay fit, stay active! You've got this!!") + exit
 else
