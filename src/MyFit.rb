@@ -55,19 +55,24 @@ leg_ex = [
 ]
 
 lowcal = [
-    ["Greek Yogurt", "60 calories per 100 grams \nGood source of protein"],
+    ["Greek Yogurt", "60 calories per 100g \nGood source of protein"],
     ["Berries(straw, blue, rasp)", "84 calories per 1 cup \nBenefitial fibre and vitamins"],
     ["Eggs", "70 calories per egg \nReduces hunger by boosting fullness"],
     ["Popcorn", "31 calories per cup \nRich in fibre and very satiating"],
     ["Cod(fish)", "189 calories per fillet(231g) \nIncredibly high in protein \nEssential healthy fats"],
-    ["Cottage Cheese", "160 calories per cup(226 grams) \nLot's of combinations for snack ideas"],
-    ["Watermelon", "46 calories per cup (152 grams) \n High water content hydrates you"]
+    ["Cottage Cheese", "160 calories per cup(226g) \nLot's of combinations for snack ideas"],
+    ["Watermelon", "46 calories per cup (152g) \nHigh water content hydrates you"]
 ]
 
 highcal = [
-    [],
-    [],
-    [],
+    ["Peanutbutter", "588 calories per 100 grams \nCan be incorporated into lots of meal ideas \nEasy to consume"],
+    ["Full-cream Milk", "150 calories per 250ml \nReplenishes electrolytes \nStrong source of calcium, vitamins and minerals"],
+    ["Nuts", "600 - 800 calories per cup (137g) \nIncredibly calorie-dense \nVery easy to consume \nHealthy fats"],
+    ["Salmon", "360 calories per fillet(150g) \nEssential source of omega-3 \nProtein-rich"],
+    ["Avocado", "250 - 350 calories per avocado \nHealthy source of fats"],
+    ["Dark Chocolate", "600 calories per 100g \nGreat cheat meal snack \nRich in antioxcidents"],
+    ["Oatmeal", "160 calories per cup(234g) \nHigh source of carbs and fibre \nCombine with protein powder and berries"],
+    ["Honey", "65 calories per tbsp(21g) \nCan be mixed into lost of foods to boost calories \nA natural sweetner"]
 ]
 
 quotes = [
@@ -334,13 +339,22 @@ when "2"
         puts table_lowcal
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
+        clear_screen
         if input == "return"
             next
         else
             exit
         end
     when "4"
-        puts "FOUR"
+        puts table_highcal
+        puts "When ready, type 'return' to go back to menu"
+        input = gets.chomp
+        clear_screen
+        if input == "return"
+            next
+        else
+            exit
+        end
     else
         puts "Invalid Selection".colorize(:red)
     end
