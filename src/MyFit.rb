@@ -55,9 +55,13 @@ leg_ex = [
 ]
 
 lowcal = [
-    ["Greek Yogurt", "60 calories per 100 grams \n Good source of protein"],
-    ["Berries(straw, blue, rasp)", "84 calories per 1 cup \n benefitial fibre and vitamins"],
-    ["Eggs", "70 calories per egg \n reduces hunger by boosting fullness"],
+    ["Greek Yogurt", "60 calories per 100 grams \nGood source of protein"],
+    ["Berries(straw, blue, rasp)", "84 calories per 1 cup \nBenefitial fibre and vitamins"],
+    ["Eggs", "70 calories per egg \nReduces hunger by boosting fullness"],
+    ["Popcorn", "31 calories per cup \nRich in fibre and very satiating"],
+    ["Cod(fish)", "189 calories per fillet(231g) \nIncredibly high in protein \nEssential healthy fats"],
+    ["Cottage Cheese", "160 calories per cup(226 grams) \nLot's of combinations for snack ideas"],
+    ["Watermelon", "46 calories per cup (152 grams) \n High water content hydrates you"]
 ]
 
 highcal = [
