@@ -6,7 +6,7 @@ require 'colorize'
 require 'tty-progressbar'
 require 'tty-prompt'
 
-#methods used in this application
+# Methods used in this application
 def clear_screen
     if RUBY_PLATFORM =~ /win32|win64|\.NET|windows|cygwin|mingw32/i
       system('cls')
@@ -26,12 +26,12 @@ chest_ex = [
     ["Decline\n Pushup", "10 - 15", " 1. Keep pushup technique in mind \n 2. Align hands with center of chest \n 3. Keep hands slightly wider than shoulder-width apart \n 4. Keep legs straight, feet together and core tight throughout movement", "Too hard? \n Reduce leg elevation or regress to pushup \nToo easy? \n Elevate hands for deeper range of motion"],
     ["Chest\n Dip", "10 - 12", " 1. Hold onto parallel bars with feet off the ground/elbows locked out \n 2. Lean forward to put emphasis on chest \n 3. Maintain lean whilst lowering yourself \n 4. Keep elbows tucked in throughout motion \n 5. Hold at bottom for a second then strictly push till elbows lockout", "Too hard?\n Place something for your feet to rest on\n whilst you do the movement\nToo easy? \n Invest in a weight vest! Or place a resistance\n band around the back of your neck"],
     ["Archer\nPushup", "5 - 8\nEach arm", " 1. Get into a pushup position but with hands wide apart \n 2. Ensure hands are facing outwards(fingers pointing out, not forward) \n 3. Lower yourself by bending only one arm \n 4. Keep opposite arm straight out (not allowing hand to move/slide) \n 5. Alternate arm each rep until completion", "Too hard?\n instead, elevate one hand slightly\n and conduct a normal pushup with more\n tension placed on lower arm\nToo easy?\n attempt a single-arm pushup"],
-    ["Type-\nwriter\nPushup", "8 - 10", " 1. Start in a wide pushup position with hands facing out \n 2. Lower yourself like any other pushup movement \n 3. At the bottom of the movement, shift your weight onto one arm \n 4. Hold then switch to your other arm (keeping chest close to ground) \n 5. Bring yourself back to the center and push up to complete the rep" ],
-    [""]
+    ["Type-\nwriter\nPushup", "8 - 10", " 1. Start in a wide pushup position with hands facing out \n 2. Lower yourself like any other pushup movement \n 3. At the bottom of the movement, shift your weight onto one arm \n 4. Hold then switch to your other arm (keeping chest close to ground) \n 5. Bring yourself back to the center and push up to complete the rep", "Too hard? \n practice holding the movement at the bottom \nToo easy? \n Explode off the ground at the top of the movement" ],
+    ["Explode\nNegative\n Pushup", "5 - 10", " 1. In pushup position, lower your chest to the ground \n 2. When lowering yourself, do it as slow as possible \n 3. Hold at the bottom \n 4. Push with explosive power \n 5. Ensure your hands come off the ground at end of movement", "Too hard? \n Do it with your hands on an elevated surface \nToo easy? \n make a single rep take a whole minute to complete"]
 ]
 
 back_ex = [
-    [],
+    ["Australian\nPullup", "12 - 15", " 1. Hold onto a low bar with your body straight and heels on the ground \n 2. "],
     [],
     []
 ]
@@ -96,11 +96,11 @@ quotes = [
     ]
 
 # styling and titling of various tables
-table_chest = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => chest_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
-table_back = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => back_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
-table_arms = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => arm_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
-table_shoulders = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => shoulder_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true} 
-table_legs = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => leg_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Pick at least 2 Green, 1 Yellow and 1 Red", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
+table_chest = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => chest_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Complete them in a circuit with little to no rest between each exercise \n Rest for 2 - 4 minutes before completing the circuit again. Complete the circuit at least 4 times", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
+table_back = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => back_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Complete them in a circuit with little to no rest between each exercise \n Rest for 2 - 4 minutes before completing the circuit again. Complete the circuit at least 4 times", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
+table_arms = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => arm_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Complete them in a circuit with little to no rest between each exercise \n Rest for 2 - 4 minutes before completing the circuit again. Complete the circuit at least 4 times", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
+table_shoulders = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => shoulder_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Complete them in a circuit with little to no rest between each exercise \n Rest for 2 - 4 minutes before completing the circuit again. Complete the circuit at least 4 times", :style => {:border_x => "=", :border_i => "x", :all_separators => true} 
+table_legs = Terminal::Table.new :headings => ['Exercise', 'Rep-range', 'Technique', 'Assistance'], :rows => leg_ex, :title => "Workout \n Select at least 4 exercises from the list below \n Complete them in a circuit with little to no rest between each exercise \n Rest for 2 - 4 minutes before completing the circuit again. Complete the circuit at least 4 times", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
 table_lowcal = Terminal::Table.new :headings => ['Food', 'Information'], :rows => lowcal, :title => "Low-calorie foods", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
 table_highcal = Terminal::Table.new :headings => ['Food', 'Information'], :rows => highcal, :title => "High-calorie foods", :style => {:border_x => "=", :border_i => "x", :all_separators => true}
 
@@ -341,6 +341,17 @@ when "2"
         puts "Invalid Selection".colorize(:red)
     end
 when "3"
+    puts "
+    
+                                    ███    ███  ██████  ████████ ██ ██    ██  █████  ████████ ███████ 
+                                    ████  ████ ██    ██    ██    ██ ██    ██ ██   ██    ██    ██      
+                                    ██ ████ ██ ██    ██    ██    ██ ██    ██ ███████    ██    █████   
+                                    ██  ██  ██ ██    ██    ██    ██  ██  ██  ██   ██    ██    ██      
+                                    ██      ██  ██████     ██    ██   ████   ██   ██    ██    ███████ 
+                                                                  
+                                                                  
+
+    "
     puts ""
     array_shuffle(quotes)
     puts ""
