@@ -24,3 +24,20 @@ This application will provide valuable information to help people meet their fit
 https://trello.com/b/RDov4A3A/terminal-application
 
 # R10
+## How to Install
+- Install the source code from https://github.com/smittyk1/Terminal-app-MyFit 
+- Navigate to MyFit.rb on your terminal
+- If you do not have bundler installed, type 'install bundler' into your terminal
+- Once installed, type 'bundle install' to aquire the gems of the application
+- Type MyFit.rb to run the application
+
+## System requirements
+- Best run on a MAC OS
+- the gen dependencies are as follows:
+    - bmi (~> 0.2.0)
+    - colorize (~> 0.8.1)
+    - rspec (~> 3.9)
+    - rubybody (~> 0.0.3)
+    - terminal-table (~> 1.8)
+    - tty-progressbar (~> 0.17.0)
+    - tty-prompt (~> 0.22.0)

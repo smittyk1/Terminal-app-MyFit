@@ -1,5 +1,5 @@
 require_relative '../MyFit'
-
+require 'rspec/autorun'
 
 describe 'array_shuffle' do
     it 'it should return array.sample' do
