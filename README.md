@@ -1,3 +1,5 @@
+# R4
+https://github.com/smittyk1/Terminal-app-MyFit
 # R5
 The terminal application will be a fitness app. 
 - It will allow the user to select a desired muscle group they want to train. The application will then give them a small workout focusing on training that muscle. It will provide exercises, the rep ranges that the user should aim for, and information on how to conduct these exercises with correct form.
