@@ -16,3 +16,11 @@ This application will provide valuable information to help people meet their fit
 
 # R7
 - The user will interact with each feature of the application through instructions and prompts they are provided. The application clearly states at each step what it wants from the user. This ensures that the correct answer is often provided and neccessary error handling is minimal. The user is given a list of options adequetly titled, they will select an option and the application will lead them from there. The user will provide information based on themselves and what they want to do within the application in order to receive the answers that they're looking for. This ensures that the application runs smoothly and the user is able to fully utilise each feature. When an error does occur, the user will be informed and re-prompted for a correct answer. At any point the user will be able to exit the application if neccessary.
+
+# R8
+![flowchart](docs/flowchart.png)
+
+# R9
+https://trello.com/b/RDov4A3A/terminal-application
+
+# R10

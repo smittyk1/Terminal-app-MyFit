@@ -31,9 +31,11 @@ chest_ex = [
 ]
 
 back_ex = [
-    ["Australian\nPullup", "12 - 15", " 1. Hold onto a low bar with your body straight and heels on the ground \n 2. "],
-    [],
-    []
+    ["Australian\nPullup", "12 - 15", " 1. Hold onto a low bar with your body straight and heels on the ground \n 2. Pull your chest to the bar \n 3. Hold and squeeze your back \n 4. Slowly extend arms to lower yourself", "Too hard? \n Situate a resistance band around your back\n and hold it between your palm and the bar\nToo easy? \n Elevate your feet"],
+    ["Pullup", "8 - 10", " 1. Hold onto bar and let lats extend \n 2. Shrug to squeeze traps and bring shoulderblades together \n 3. Pull up by allowing elbows to drive down towards the ground \n 4. Squeeze once upper chest comes to bar \n 5. Lower yourself with controle", "Too hard?\n Do jumping negative pullups\nToo easy?\n Attempt a muscle up or archer pullup"],
+    ["Straight\narm\nLat pull", "8 - 12", " 1. Hold onto bar with arms extended and knees tucked \n 2. Keeping arms straight, pull knees to bar \n 3. Squeeze lats and slowly lower knees down", "Too hard?\n Hold the horizontal position\n with a resistance band\nToo easy? \n Do it with one or both legs\n held straight out"],
+    ["Chinup", "10 - 12", "1. Hold bar with a reversed grip \n 2. Bring chest to bar by pulling elbows down and back\n 3. Squeeze traps and biceps at top of movement \n 4. Slowly lower yourself whilst still squeezing", "Too hard? \n Try Australian chinups \nToo easy? \n When lowering yourself, try\n using only one arm"],
+    ["Commando\n Pullup", "6 - 10", "1. Grip bar with both hands together \n 2. Keeping body straight, pull to your shoulder \n 3. alternate with each rep, pulling to different shoulder\n 4. Slowly lower after each rep", "Too hard? \n Jump to pull yourself up \nToo easy? \n Release one hand when lowering yourself"]
 ]
 
 arm_ex = [
