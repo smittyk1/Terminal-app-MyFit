@@ -1,3 +1,4 @@
+# link to application
 require_relative '../MyFit'
 require 'rspec/autorun'
 
