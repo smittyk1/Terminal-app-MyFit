@@ -39,9 +39,13 @@ back_ex = [
 ]
 
 arm_ex = [
-    [],
-    [],
-    []
+    ["Diamond\nPushup", "10 - 12", " 1. Get into a push up position \n 2. Touch your thumbs and index fingers together to make a diamond \n 3. Bend elbows and touch chest to diamond shape \n 4. Ensure elbows are tucked in \n 5. Explode up with the help of triceps", "Too hard? \n Do it from your knees \nToo easy? \n Elevate your feet"],
+    ["Bodyweight\n Tricep\nExtension", "8 - 12", " 1. Get into a high plank position \n 2. Hands shoulder width apart, lower elbows to ground\n 3. Hold whilst forearms lay flat on the ground \n 4. Use triceps to extend arms staight again and push bodyweight back up", "Too hard? \n The further your face is away from\n your hands, the easier it will be\nToo easy?\n Try the 'impossible' dip"],
+    ["Pseudo\nPushup", "12 - 15", " 1. Start in a pushup position with fingers pointed to your feet \n 2. Push with your toes to slightly lean forward \n 3. Lower yourself with your elbows tucked in \n 4. Explode up until arms are straight", "Too hard? \n Put your hands on an elevated surface\nToo easy? \n Invest in a weight vest"],
+    ["headbangers", "10 - 12", " 1. Get into a chinup position \n 2. Pull yourself up \n 3. Instead of going down, extend your arms \n 4. Retract your arms like you're curling yourself \n 5. The movement looks like you're banging your head on the bar", "Too hard? \n Do a bodyweight curl on a low bar \nToo easy? \n Do them in slow motion"],
+    ["Australian\nChinup", "12 - 15", " 1. Grab onto a low bar with a reversed grip \n 2. Bring your elbows back til your chest touches the bar \n 3. Hold and squeeze biceps \n 4. Slowely extend your arms back down", "Too hard? \n Do a resistance band bicep curl \nToo easy? \n Do chinups"],
+    ["Hefesto", "5", " 1. Grip a low bar behind your back \n 2. Lean forward and allow feet to lift off ground \n 3. Keep elbows bent and hold \n 4. Extend arms and lower your bodyweight \n 5. Release grip and repeat", "Too hard? \n Wrap a resistance band around your waist \nToo easy? \n After extending, pull your lower back back to the bar"],
+    ["Tricep\nExtension", "12 - 15", " 1. Facing a low bar, grip it \n 2. Get on your toes and lean forward \n 3. Lower your head below/past the low bar, allowing elbows to bend \n 4. Use your triceps to extend arms and push back to start position", "Too hard? \n Use a higher bar \nToo easy? \n Use a lower bar"]
 ]
 
 shoulder_ex = [
