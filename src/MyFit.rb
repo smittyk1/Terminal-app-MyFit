@@ -49,9 +49,10 @@ arm_ex = [
 ]
 
 shoulder_ex = [
-    [],
-    [],
-    []
+    ["Pike\nPushup", "8 - 12", " 1. Get into a pike position \n 2. Lower yourself so your nose touches the ground \n 3. Using your shoulders, push back up \n 4. As you push, point the top of your head to the ground \n 5. Be sure to lock out", "Too hard? \n Elevate your hands \nToo easy? \n Elevate you feet"],
+    ["Handstand", " 30sec - 1min", " 1. Hold yourself in a handstand position \n 2. Ensure feet are together and legs are straight \n 3. Don't allow back to bend, keep firm and tight \n 4. Apply pressure to fingertips and palms to balance", "Too hard? \n Lean against a wall for assistance \nToo easy? \n Try a handstand pushup \n or handstand shoulder taps"],
+    ["Resistance band\nlateral raise", "12 - 15\neach arm", " 1. Tie a resistance band to a low object \n 2. With your arm straight, raise it out to your side \n 3. Slowly lower back down to your waist", "Too hard? \n Use a thinner band \nToo easy? \n Use a thicker band"],
+    ["Shoulder taps", "45sec - 1min", " 1. Get into a high plank position \n 2. squeeze core and ensure your body is straight \n 3. Lift one hand at a time and tap the opposite shoulder", "Too hard? \n Do it for 30sec \nToo easy? \n Do it in a handstand position"]
 ]
 
 leg_ex = [
