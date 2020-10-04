@@ -56,9 +56,10 @@ shoulder_ex = [
 ]
 
 leg_ex = [
-    [],
-    [],
-    []
+    ["Pistol Squats", "5 - 10\neach leg", " 1. Extend one leg straight out \n 2. Lower youself on the other leg into a squat position \n 3. Extend your arms forward to balance \n 4. Push with your bent leg back to starting position", "Too hard? \n Assist yourself by holding onto something \nToo easy? \n Pause at the bottom"],
+    ["Squat jumps", "15 - 20", " 1. Keep heels firm on the ground \n 2. Lower yourself into a squat position \n 3. With explosive power, push yourself up and jump \n 4. When you land, allow yourself to squat again", "Too hard? \n Just squat, don't jump \nToo easy? \n Do a burpee when you land"],
+    ["Lunges", "10 - 12\neach leg", " 1. Start with feet together \n 2. Lunge forward and shift your weight onto the lunging leg \n 3. Push with that leg to bring yourself back to starting position \n 4. Repeat with the alternate leg", "Too hard? \n Assist yourself by holding onto something \nToo easy? \n Squat after each rep"],
+    ["Glute thrusts", "12 - 15", " 1. Lay on your back with your feet flat on the ground \n 2. Pushing through your feet, raise your hips \n 3. Squeeze glutes at top of motion \n 4. Lower yourself down slowly and repeat", "Too hard? \n Reduce bend in legs \nToo easy? \n Put something on your pelvis to add weight"]
 ]
 
 lowcal = [
@@ -187,6 +188,7 @@ when "1"
         puts table_back
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
+        clear_screen
         if input == "return"
             next
         else
@@ -196,6 +198,7 @@ when "1"
         puts table_arms
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
+        clear_screen
         if input == "return"
             next
         else
@@ -205,6 +208,7 @@ when "1"
         puts table_shoulders
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
+        clear_screen
         if input == "return"
             next
         else
@@ -214,6 +218,7 @@ when "1"
         puts table_legs
         puts "When ready, type 'return' to go back to menu"
         input = gets.chomp
+        clear_screen
         if input == "return"
             next
         else
